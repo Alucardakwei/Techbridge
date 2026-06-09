@@ -1,0 +1,15 @@
+{
+  "name": "techbridge-gh",
+  "local_port": 58267,
+  "entrypoint": "bun run dev",
+  "publish": {
+    "label": "techbridge-gh",
+    "type": "http",
+    "entrypoint": "bun run prod",
+    "published_port": 57094,
+    "env": {
+      "NODE_ENV": "production",
+      "ZO_CLIENT_IDENTITY_TOKEN": "none"
+    }
+  }
+}
