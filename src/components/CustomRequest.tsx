@@ -1,24 +1,39 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
-const WHATSAPP_NUMBER = "233257901119";
+const WHATSAPP_NUMBER = "233593320772";
 
-
+const CATEGORIES = [
+  { value: "", label: "📋 Select category…" },
+  { value: "phones", label: "📱 Phones & Tablets" },
+  { value: "laptops", label: "💻 Laptops" },
+  { value: "audio", label: "🎧 Audio & Speakers" },
+  { value: "watches", label: "⌚ Smartwatches" },
+  { value: "gaming", label: "🎮 Gaming" },
+  { value: "cameras", label: "📷 Cameras & Drones" },
+  { value: "other", label: "❓ Other" },
+];
 
 const HINTS = [
   "Xiaomi 15 Ultra",
   "iPhone 16 Pro Max",
   "MacBook Pro M4",
+  "Sony WH-1000XM5",
+  "Samsung TV",
+  "DJI Drone",
+  "Watch Ultra",
   "PS5 Slim",
   "Anker Power Bank",
+  "GoPro HERO 13",
 ];
 
 function buildMessage(description: string, category: string): string {
   const catLabel = CATEGORIES.find((c) => c.value === category)?.label ?? "";
   return [
-    "Hi TechBridge GH! Please i want to order:",
+    "Hi TechBridge GH! I want to order:",
     "",
     `Product: ${description}`,
+    catLabel ? `Category: ${catLabel}` : "",
   ]
     .filter(Boolean)
     .join("\n");
@@ -56,7 +71,7 @@ export default function CustomRequest() {
           Just tell us — we&apos;ll source it.
         </h2>
         <p className="text-[#94A3B8] text-sm mb-6 leading-relaxed">
-          Type what you want and we&apos;ll send the request straight to our WhatsApp.
+          Type what you want, pick a category, and we&apos;ll send the request straight to our WhatsApp.
         </p>
 
         <div className="bg-white/4 border border-white/10 rounded-2xl p-5 backdrop-blur-sm md:p-8">
