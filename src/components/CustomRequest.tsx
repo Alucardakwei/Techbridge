@@ -28,7 +28,7 @@ function buildMessage(description: string, category: string): string {
     "Hi TechBridge GH! Please i want to order:",
     "",
     `Product: ${description}`,
-    catLabel ? `Category: ${catLabel}` : "",
+
   ]
     .filter(Boolean)
     .join("\n");
