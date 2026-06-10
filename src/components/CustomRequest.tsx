@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
-const WHATSAPP_NUMBER = "233593320772";
+const WHATSAPP_NUMBER = "233257901119";
 
 const CATEGORIES = [
   { value: "", label: "📋 Select category…" },
@@ -18,19 +18,14 @@ const HINTS = [
   "Xiaomi 15 Ultra",
   "iPhone 16 Pro Max",
   "MacBook Pro M4",
-  "Sony WH-1000XM5",
-  "Samsung TV",
-  "DJI Drone",
-  "Watch Ultra",
   "PS5 Slim",
   "Anker Power Bank",
-  "GoPro HERO 13",
 ];
 
 function buildMessage(description: string, category: string): string {
   const catLabel = CATEGORIES.find((c) => c.value === category)?.label ?? "";
   return [
-    "Hi TechBridge GH! I want to order:",
+    "Hi TechBridge GH! Please i want to order:",
     "",
     `Product: ${description}`,
     catLabel ? `Category: ${catLabel}` : "",
