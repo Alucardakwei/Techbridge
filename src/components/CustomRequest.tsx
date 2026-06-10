@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
-const WHATSAPP_NUMBER = "233593320772";
+const WHATSAPP_NUMBER = "233257901119";
 
 const CATEGORIES = [
   { value: "", label: "📋 Select category…" },
